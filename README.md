@@ -4,7 +4,7 @@
 
 2. User should be able to authenticate themselves.
 
-3. Other users should be able to like a tweet.
+3. Other users should be able to like and unlike a tweet.
 
 4. Other users should be able to tweet to a tweet.
 
@@ -36,3 +36,12 @@ Based on the requirements above, we can identify the models as:
     - Word
     - List of tweets
     - Ranking
+
+    (LIKE model) (Like can only be on a comment or a tweet)
+    - TweetId
+    - UserId
+
+    (Comment model) 
+    - UserId
+    - LikeId
+    - Content

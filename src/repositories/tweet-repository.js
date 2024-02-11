@@ -1,7 +1,7 @@
 import Tweet from '../models/tweet.js';
 
 class TweetRepository{
-    async createTweet(data){
+    async create(data){
         try{
             const tweet= await Tweet.create(data);
             return tweet;
@@ -12,7 +12,7 @@ class TweetRepository{
         }
     }
 
-    async getAllTweets() {
+    async getAll() {
         try {
             const tweets = await Tweet.find({});
             return tweets;
@@ -23,7 +23,7 @@ class TweetRepository{
         }
     }
 
-    async getTweet(id) {
+    async get(id) {
         try {
             const tweet = await Tweet.findById(id);
             return tweet;
@@ -33,7 +33,7 @@ class TweetRepository{
             throw error;
         }
     }
-    async deleteTweet(data) {
+    async delete(data) {
         try {
             const tweet = await Tweet.deleteOne(data);
             return tweet;

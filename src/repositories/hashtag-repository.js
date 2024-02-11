@@ -36,7 +36,7 @@ class HashtagRepository {
         }
     }
 
-    async getHashtag(id) {
+    async get(id) {
         try {
             const hashtag = await Hashtag.findById(id);
             return hashtag;
@@ -47,7 +47,7 @@ class HashtagRepository {
         }
     }
 
-    async deleteHashtag(data) {
+    async delete(data) {
         try {
             const response = await Hashtag.deleteOne(data);
             return response;
